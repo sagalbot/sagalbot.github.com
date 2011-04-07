@@ -13,7 +13,7 @@ body {
 	text-shadow: 0px 1px 1px white;
 }
 
-div {
+div#bg {
 	display: block;
 	width: 500px; height: 175px;
 	background-color: #e3e3e3;
@@ -22,8 +22,8 @@ div {
 	position: relative;
 }
 
-div:before,
-div:after {
+div#bg:before,
+div#bg:after {
 	padding: 0; margin: 0;
 	height: 0px; width: 0px;
 	position: absolute;
@@ -33,12 +33,12 @@ div:after {
 	bottom: 29px; 
 	z-index: -1;
 }
-div:before {
+div#bg:before {
 	border-color: transparent #0d123e transparent transparent;
 	left: -51px; 
 }
 
-div:after {
+div#bg:after {
 	border-color: transparent transparent transparent #0d123e; 
 	right: -51px;
 }
@@ -76,7 +76,7 @@ h2 {
 <body>
 
 
-<div>
+<div id="bg">
 	<h1>CSS Ribbons</h1>	
 </div>
 

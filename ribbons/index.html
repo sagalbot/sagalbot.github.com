@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+
+<title>CSS3 Ribbons</title>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<link href="css/prettify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/prettify.js"></script>
+<style type="text/css">
+body {
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	text-shadow: 0px 1px 1px white;
+}
+
+#wrapper {
+	background-color: #e3e3e3;
+	border: 1px solid #bcbcbc;
+	width: 500px;
+	margin: 0 auto;
+	padding: 2em 0;
+	z-index: 5;
+}
+h1 {
+	text-shadow: 0px 1px 1px white;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	color: #ffffff;
+	padding: 1em 0;
+	width: 550px;
+	margin: 0 0 0 -25px;
+	text-align: center;
+	z-index: 2;
+	background-color: #0b2b61;
+	background: -moz-linear-gradient(top, #0b2b61, #1153c0);
+	background: -webkit-gradient(linear, left top, left bottom, from(#0b2b61), to(#1153c0));
+	-moz-box-shadow: 2px 3px 10px #011331;
+	-webkit-box-shadow: 2px 3px 10px #011331;
+	border-right: 1px solid #0059ec;
+	border-left: 1px solid #0059ec;
+}
+h2 {
+	text-align: center;
+	text-shadow: 0px 1px 1px white;
+	font-family: Helvetica, Verdana, Arial, sans-serif;	
+}
+
+
+.triangle-left {
+	border-color: transparent #0d123e transparent transparent;
+	border-style: solid;
+	border-width: 25px;
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	left: -50px;
+	bottom: -25px;
+	z-index: -1;
+	
+}
+.triangle-right {
+	border-color: transparent transparent transparent #0d123e;
+	border-style: solid;
+	border-width: 25px;
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	right: -50px;
+	bottom: -25px;
+	z-index: -1;
+}
+.ribbons {
+	position: relative;
+}
+p.big {
+	font-size: 30px;
+	margin-top: 1em;
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	text-align: center;
+	text-shadow: 0px 1px 1px white;
+}
+pre {
+	border: 1px solid #bcbcbc;
+	padding: 1em;
+	width: 800px;
+	margin: 1em auto;
+	background: #e3e3e3;
+}
+.flex {
+	border: 1px solid #bcbcbc;
+	background: #e3e3e3;
+	padding: 1em;
+	margin: 1em auto;
+	width: auto;
+}
+h2 a {
+	color: #0b2b61;
+}
+</style>
+</head>
+<body onload="prettyPrint()">
+
+
+<div id="wrapper">
+
+<div class="ribbons">
+
+	<span class="triangle-left"></span>
+		<h1>CSS Ribbons</h1>
+	<span class="triangle-right"></span>
+	
+</div>
+
+<p class="big">Apparently, ribbons are 100% possible using only CSS.</p>
+
+</div>
+
+<h2>The Markup</h2>
+<pre class="prettyprint">
+&lt;div id="wrapper"&gt;
+
+&lt;div class="ribbons"&gt;
+
+	&lt;span class="triangle-left"&gt;&lt;/span&gt;
+		&lt;h1&gt;CSS Ribbons&lt;/h1&gt;
+	&lt;span class="triangle-right"&gt;&lt;/span&gt;
+	
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+<h2>The CSS</h2>
+<pre class="prettyprint">
+#wrapper {
+	background-color: #e3e3e3;
+	border: 1px solid #bcbcbc;
+	width: 500px;
+	margin: 0 auto;
+	padding: 2em 0;
+	z-index: 5;
+}
+h1 {
+	text-shadow: 0px 1px 1px white;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	color: #ffffff;
+	padding: 1em 0;
+	width: 550px;
+	margin: 0 0 0 -25px;
+	text-align: center;
+	z-index: 2;
+	background-color: #0b2b61;
+	background: -moz-linear-gradient(top, #0b2b61, #1153c0);
+	background: -webkit-gradient(linear, left top, left bottom, from(#0b2b61), to(#1153c0));
+	-moz-box-shadow: 2px 3px 10px #011331;
+	-webkit-box-shadow: 2px 3px 10px #011331;
+	border-right: 1px solid #0059ec;
+	border-left: 1px solid #0059ec;
+}
+.triangle-left {
+	border-color: transparent #0d123e transparent transparent;
+	border-style: solid;
+	border-width: 25px;
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	left: -50px;
+	bottom: -25px;
+	z-index: -1;
+	
+}
+.triangle-right {
+	border-color: transparent transparent transparent #0d123e;
+	border-style: solid;
+	border-width: 25px;
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	right: -50px;
+	bottom: -25px;
+	z-index: -1;
+}
+.ribbons {
+	position: relative;
+}
+</pre>
+
+<h2>How does it all work?</h2>
+<div style="width: 800px; margin: 0 auto; border: 1px solid #dbdbdb; padding: 1em;">
+
+<p>It might look like there is a lot going on here. When you break it down, it's really not so bad. The triangles are quite simple to accomplish. When you put a border on an element, the browser renders that border with a 45 degree angle at both ends. Try this out:</p>
+
+<h3>HTML</h3>
+<pre class="flex">
+&lt;span class="triangle-left"&gt;
+</pre>
+<h3>CSS</h3>
+<pre class="flex">
+.triangle-left {
+	width: 0; heigh: 0;
+	border-color: transparent #000 transparent transparent;
+	border-style: solid;
+	border-width: 25px;
+}
+</pre>
+<h3>The Result</h3>
+<div style="width:0; height:0; border-color: transparent #000 transparent transparent; border-style: solid; border-width: 25px;"></div>
+<p>What's happening here is you are telling the browser to render 3 transparent borders and one black. In this case all you are seeing is the right hand border. If you change the colors from transparent, you'll find some interesting results.</p>
+</div>
+
+
+</body>
+</html>

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 
 <title>CSS3 Ribbons</title>
 
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta charset="utf-8">
 
 <style type="text/css">
 
@@ -14,106 +13,74 @@ body {
 	text-shadow: 0px 1px 1px white;
 }
 
-#wrapper {
+div {
+	display: block;
+	width: 500px; height: 175px;
 	background-color: #e3e3e3;
 	border: 1px solid #bcbcbc;
-	width: 500px;
 	margin: 0 auto;
-	padding: 2em 0;
-	z-index: 5;
+	position: relative;
 }
+
+div:before,
+div:after {
+	padding: 0; margin: 0;
+	height: 0px; width: 0px;
+	position: absolute;
+	content: "";
+	border-style: solid;
+	border-width: 25px;
+	bottom: 29px; 
+	z-index: -1;
+}
+div:before {
+	border-color: transparent #0d123e transparent transparent;
+	left: -51px; 
+}
+
+div:after {
+	border-color: transparent transparent transparent #0d123e; 
+	right: -51px;
+}
+
 h1 {
 	text-shadow: 0px 1px 1px white;
 	font-family: Helvetica, Verdana, Arial, sans-serif;
 	color: #ffffff;
 	padding: 1em 0;
-	width: 550px;
-	margin: 0 0 0 -25px;
+	width: 552px;
+	margin: 20px 0 0 -27px;
 	text-align: center;
-	z-index: 2;
+	z-index: 9999;
 	background-color: #0b2b61;
 	background: -moz-linear-gradient(top, #0b2b61, #1153c0);
 	background: -webkit-gradient(linear, left top, left bottom, from(#0b2b61), to(#1153c0));
-	-moz-box-shadow: 2px 3px 10px #011331;
-	-webkit-box-shadow: 2px 3px 10px #011331;
+	-moz-box-shadow: 0px 3px 6x #011331;
+	-webkit-box-shadow: 0px 3px 6px #011331;
 	border-right: 1px solid #0059ec;
 	border-left: 1px solid #0059ec;
 }
+
 h2 {
-	text-align: center;
-	text-shadow: 0px 1px 1px white;
-	font-family: Helvetica, Verdana, Arial, sans-serif;	
-}
-
-
-.triangle-left {
-	border-color: transparent #0d123e transparent transparent;
-	border-style: solid;
-	border-width: 25px;
-	height: 0px;
-	width: 0px;
-	position: absolute;
-	left: -50px;
-	bottom: -25px;
-	z-index: -1;
-	
-}
-.triangle-right {
-	border-color: transparent transparent transparent #0d123e;
-	border-style: solid;
-	border-width: 25px;
-	height: 0px;
-	width: 0px;
-	position: absolute;
-	right: -50px;
-	bottom: -25px;
-	z-index: -1;
-}
-.ribbons {
-	position: relative;
-}
-p.big {
+	width: 500px;
+	margin: 0 auto;
 	font-size: 30px;
 	margin-top: 1em;
 	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 	text-align: center;
 	text-shadow: 0px 1px 1px white;
 }
-pre {
-	border: 1px solid #bcbcbc;
-	padding: 1em;
-	width: 800px;
-	margin: 1em auto;
-	background: #e3e3e3;
-}
-.flex {
-	border: 1px solid #bcbcbc;
-	background: #e3e3e3;
-	padding: 1em;
-	margin: 1em auto;
-	width: auto;
-}
-h2 a {
-	color: #0b2b61;
-}
 
 </style>
 </head>
 <body>
 
-<div id="wrapper">
 
-<div class="ribbons">
-
-	<span class="triangle-left"></span>
-		<h1>CSS Ribbons</h1>
-	<span class="triangle-right"></span>
-	
+<div>
+	<h1>CSS Ribbons</h1>	
 </div>
 
-<p class="big">Apparently, ribbons are 100% possible using only CSS.</p>
-
-</div><!-- /#wrapper -->
+<h2>Apparently, ribbons are 100% possible using only CSS 1 & 2.</h2>
 
 
 </body>

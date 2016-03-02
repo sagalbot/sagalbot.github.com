@@ -1,3 +1,3 @@
 [submodule "vue-select"]
 	path = vue-select
-	url = git@github.com:sagalbot/vue-select.git
+url=http://github.com/sagalbot/vue-select.git

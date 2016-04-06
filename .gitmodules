@@ -3,4 +3,4 @@
 url=https://github.com/sagalbot/vue-select.git
 [submodule "vue-sortable"]
 	path = vue-sortable
-	url = git@github.com:sagalbot/vue-sortable.git
+url=https://github.com/sagalbot/vue-sortable.git
